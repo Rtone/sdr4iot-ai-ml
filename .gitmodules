@@ -1,0 +1,3 @@
+[submodule "SigMF"]
+	path = SigMF
+	url = https://github.com/gnuradio/SigMF

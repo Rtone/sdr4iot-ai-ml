@@ -1,0 +1,26 @@
+{
+    "name": "TrainSDR4IoTModels",
+    "request": {
+        "resources": {
+            "cpus": 8,
+            "gpus": 6,
+            "cpuMemoryGb": 10,
+            "clusterId": 4
+        },
+        "docker": {
+            "image": "alexisduque/gpulab-tensorflow-sdr4iot:latest",
+            "command": "/project/sdr4iot-ml/gpulab/train_job.sh",
+            "storage": [
+                {
+                    "containerPath": "/project",
+                    "hostPath": "/project"
+                }
+            ],
+            "user": "root"
+        },
+        "scheduling": {
+            "interactive": false
+        }
+    },
+    "description": "Train SDR4IoT Tensorflow models"
+}

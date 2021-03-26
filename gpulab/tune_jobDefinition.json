@@ -1,0 +1,26 @@
+{
+    "name": "TuneSDR4IoTModels",
+    "request": {
+        "resources": {
+            "cpus": 6,
+            "gpus": 8,
+            "cpuMemoryGb": 24,
+            "clusterId": 4
+        },
+        "docker": {
+            "image": "alexisduque/gpulab-tensorflow-sdr4iot:latest",
+            "command": "/project/sdr4iot-ml/gpulab/tune_job.sh",
+            "storage": [
+                {
+                    "containerPath": "/project",
+                    "hostPath": "/project"
+                }
+            ],
+            "user": "root"
+        },
+        "scheduling": {
+            "interactive": false
+        }
+    },
+    "description": "Tune SDR4IoT Tensorflow models"
+}
